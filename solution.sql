@@ -16,7 +16,7 @@ UPDATE syntax_practice SET account_balance=10 WHERE account_balance = 0 AND tran
 SELECT * FROM syntax_practice WHERE transactions_attempted >= 9;
 
 -- Get the username and account balance of the 3 users with the highest balances, sort highest to lowest balance. NOTE: Research LIMIT
-
+SELECT username, account_balance FROM syntax_practice ORDER BY account_balance DESC LIMIT 3;
 
 
 -- Get the username and account balance of the 3 users with the lowest balances, sort lowest to highest balance.
