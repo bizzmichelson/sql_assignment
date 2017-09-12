@@ -20,6 +20,19 @@ SELECT username, account_balance FROM syntax_practice ORDER BY account_balance D
 
 
 -- Get the username and account balance of the 3 users with the lowest balances, sort lowest to highest balance.
+
+SELECT username, account_balance FROM syntax_practice ORDER BY account_balance ASC LIMIT 3;
+
 -- Get all users with account balances that are more than $100.
+
+SELECT * FROM syntax_practice WHERE account_balance > 100;
+
+
 -- Add a new record.
+
+INSERT INTO syntax_practice (username, city, transactions_completed, transactions_attempted, account_balance) VALUES ('sam', 'kansas', 12, 23, 444.00);
+
+
 -- The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: Delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
+
+DELETE FROM syntax_practice WHERE city='miami' or city='phoenix' and transactions_completed < 5;
